@@ -1,0 +1,29 @@
+{
+  "schemaValid": true,
+  "customIntegrityValid": true,
+  "decisionCount": 100,
+  "materialCount": 25,
+  "lowConfidence": [
+    "D014",
+    "D015",
+    "D016",
+    "D017",
+    "D018",
+    "D019",
+    "D020",
+    "D021",
+    "D034",
+    "D060",
+    "D078"
+  ],
+  "agentDisagreements": [
+    "D058"
+  ],
+  "studentOverrides": [
+    "D058"
+  ],
+  "allReconciliationsPass": true,
+  "studentPlaceholders": false,
+  "studentRedacted": true,
+  "errors": []
+}

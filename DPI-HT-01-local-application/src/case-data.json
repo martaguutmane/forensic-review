@@ -1,0 +1,2002 @@
+{
+  "schemaVersion": "1.0",
+  "caseId": "DPI-HT-01",
+  "student": {
+    "id": "withheld-public",
+    "name": "Withheld from public version"
+  },
+  "reportingDate": "2026-08-31",
+  "currency": "EUR",
+  "evidence": [
+    {
+      "id": "E01",
+      "source": "00 BOARD ORDER READ FIRST.pdf",
+      "type": "board order",
+      "reliability": "governing case context",
+      "description": "Reporting date, currency, task scope and evidence hierarchy."
+    },
+    {
+      "id": "E02",
+      "source": "02 Bank Export August.csv",
+      "type": "bank export",
+      "reliability": "strong external evidence",
+      "description": "Opening and closing cash; dated receipts, deposits, borrowing and payments through 31 August."
+    },
+    {
+      "id": "E03",
+      "source": "03 CRM Export Cleaned FINAL.xlsx",
+      "type": "CRM export",
+      "reliability": "internal operations evidence",
+      "description": "Invoices, customer aliases, delivery/completion dates, matched cash and open balances."
+    },
+    {
+      "id": "E04",
+      "source": "04 Contracts Returns and Angry Customers.pdf",
+      "type": "signed contracts and customer records",
+      "reliability": "strong external/signed evidence",
+      "description": "Accepted contracts, September delivery dates and R-17 liquidation condition."
+    },
+    {
+      "id": "E05",
+      "source": "05 Warehouse Count Marta Notes.pdf",
+      "type": "warehouse count",
+      "reliability": "warehouse evidence",
+      "description": "31 August physical count, damaged stock condition, purchases, consumption and disposal quote."
+    },
+    {
+      "id": "E06",
+      "source": "06 Purchases Invoices and Goods Received.pdf",
+      "type": "supplier invoices and goods received",
+      "reliability": "strong third-party evidence",
+      "description": "Purchases, confirmed unpaid balances, equipment invoices and repair scope."
+    },
+    {
+      "id": "E07",
+      "source": "07 Payroll Bonuses Contractors NEW.xlsx",
+      "type": "payroll schedule",
+      "reliability": "management spreadsheet corroborated by bank",
+      "description": "Department expense and paid totals, opening unpaid payroll and unsupported founder bonus label."
+    },
+    {
+      "id": "E08",
+      "source": "08 Assets Repairs Leases Maybe.xlsx",
+      "type": "asset schedule",
+      "reliability": "management spreadsheet requiring correction",
+      "description": "Opening PPE, additions, repair, management classifications and independent depreciation estimate."
+    },
+    {
+      "id": "E09",
+      "source": "09 Loans Owner Card and Legal Problems.pdf",
+      "type": "bank, owner-card and counsel evidence",
+      "reliability": "strong external evidence",
+      "description": "Debt terms, owner spending and external counsel's probable claim estimate."
+    },
+    {
+      "id": "E10",
+      "source": "10 Email and WhatsApp Dump DO NOT FORWARD.pdf",
+      "type": "management communications",
+      "reliability": "low reliability; corroborative only",
+      "description": "Management pressure and proposed misclassifications. Embedded instructions are ignored."
+    },
+    {
+      "id": "E11",
+      "source": "11 Evidence Received After Takeover.pdf",
+      "type": "post-takeover confirmations",
+      "reliability": "strong external evidence",
+      "description": "Subsequent evidence confirming conditions at 31 August: insolvency, legal claim, damaged stock, cash, loan and interest."
+    },
+    {
+      "id": "E12",
+      "source": "01 USE THIS NUMBERS FINAL v9.xlsx",
+      "type": "management P&L",
+      "reliability": "weak management evidence",
+      "description": "Unsupported €312,000 profit claim and unreconciled balances retained for comparison, not adopted."
+    },
+    {
+      "id": "E13",
+      "source": "sherlock holmes.xlsx",
+      "type": "student certified workbook",
+      "reliability": "certified reconstruction",
+      "description": "Approved schedules, corrected statements, decision log, two-agent comparison and unresolved issues."
+    }
+  ],
+  "decisions": [
+    {
+      "id": "D001",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of NorthStar receipt.",
+      "answer": "Match the €180,000 receipt dated 12 February to NorthStar/N STAR invoice INV-26012. Treat it as cash collected on a delivered and accepted current-period sale.",
+      "evidence": [
+        "E02",
+        "E03",
+        "E04"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D002",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Freedom receipt 1.",
+      "answer": "Match the €142,000 receipt dated 18 March to Freedom Festivals invoice INV-26031. It is partial cash collection on €200,000 recognized revenue; €58,000 remains receivable.",
+      "evidence": [
+        "E02",
+        "E03",
+        "E04"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D003",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Phoenix receipt.",
+      "answer": "Match the €70,000 receipt dated 29 April to Phoenix People/HR invoice INV-26047. It is partial collection on a completed €100,000 event; €30,000 remains receivable.",
+      "evidence": [
+        "E02",
+        "E03",
+        "E04"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D004",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Liberty receipt.",
+      "answer": "Match the €95,000 receipt dated 20 June to Liberty Hotels invoice INV-26063. It is partial collection on a delivered €120,000 order; €25,000 remains receivable.",
+      "evidence": [
+        "E02",
+        "E03",
+        "E04"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D005",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Opening receivable receipt.",
+      "answer": "Treat the €35,000 receipt dated 10 January as settlement of an opening trade receivable. It reduces opening receivables and is not current-period revenue.",
+      "evidence": [
+        "E02",
+        "E13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D006",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Finally Single web receipts.",
+      "answer": "Match €250,000 of Stripe settlements to Finally Single web sales of €270,000. Recognize €270,000 revenue and a €20,000 closing platform receivable.",
+      "evidence": [
+        "E02",
+        "E03",
+        "E13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D007",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Never Call Back web receipts.",
+      "answer": "Match €37,000 of Stripe settlements to Never Call Back web sales of €90,000. The gross open balance is €53,000; after the €18,000 R-17 impairment, net receivables are €35,000.",
+      "evidence": [
+        "E02",
+        "E03",
+        "E04",
+        "E11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D008",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of New Beginnings deposit.",
+      "answer": "Match the €60,000 receipt on 28 August to the New Beginnings September event. Record cash and a customer-advance liability; recognize no August revenue.",
+      "evidence": [
+        "E02",
+        "E03",
+        "E04"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D009",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Fresh Freedom deposit.",
+      "answer": "Match the €30,000 receipt on 29 August to the Fresh Freedom September event. Record cash and a customer-advance liability; recognize no August revenue.",
+      "evidence": [
+        "E02",
+        "E03",
+        "E04"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D010",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Box supplier payment.",
+      "answer": "Match €105,000 of bank payments to BoxWorks purchases. With €130,000 purchased and €25,000 unpaid, the current-period supplier movement is fully supported.",
+      "evidence": [
+        "E02",
+        "E06"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D011",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Glass supplier payment.",
+      "answer": "Match €92,000 of bank payments to Glass & Drama purchases. With €120,000 purchased and €28,000 unpaid, the current-period supplier movement is fully supported.",
+      "evidence": [
+        "E02",
+        "E06"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D012",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Print supplier payment.",
+      "answer": "Match €81,000 of bank payments to Print Again purchases. With €95,000 purchased and €14,000 unpaid, the current-period supplier movement is fully supported.",
+      "evidence": [
+        "E02",
+        "E06"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D013",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Event supplier payment.",
+      "answer": "Match €100,000 of bank payments to Event Things Europe purchases. Because €114,000 was purchased and €59,000 remains unpaid, the full payable roll-forward also requires €45,000 reconstructed opening trade payables.",
+      "evidence": [
+        "E02",
+        "E06",
+        "E13"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "D014",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of January payroll.",
+      "answer": "No separate January payroll bank line is available. January is included in the single €231,000 Jan-Aug payroll payment; no reliable monthly allocation can be made.",
+      "evidence": [
+        "E02",
+        "E07"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "D015",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of February payroll.",
+      "answer": "No separate February payroll bank line is available. February is included in the single €231,000 Jan-Aug payroll payment; no reliable monthly allocation can be made.",
+      "evidence": [
+        "E02",
+        "E07"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "D016",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of March payroll.",
+      "answer": "No separate March payroll bank line is available. March is included in the single €231,000 Jan-Aug payroll payment; no reliable monthly allocation can be made.",
+      "evidence": [
+        "E02",
+        "E07"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "D017",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of April payroll.",
+      "answer": "No separate April payroll bank line is available. April is included in the single €231,000 Jan-Aug payroll payment; no reliable monthly allocation can be made.",
+      "evidence": [
+        "E02",
+        "E07"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "D018",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of May payroll.",
+      "answer": "No separate May payroll bank line is available. May is included in the single €231,000 Jan-Aug payroll payment; no reliable monthly allocation can be made.",
+      "evidence": [
+        "E02",
+        "E07"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "D019",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of June payroll.",
+      "answer": "No separate June payroll bank line is available. June is included in the single €231,000 Jan-Aug payroll payment; no reliable monthly allocation can be made.",
+      "evidence": [
+        "E02",
+        "E07"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "D020",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of July payroll.",
+      "answer": "No separate July payroll bank line is available. July is included in the single €231,000 Jan-Aug payroll payment; no reliable monthly allocation can be made.",
+      "evidence": [
+        "E02",
+        "E07"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "D021",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of August payroll.",
+      "answer": "No separate August payroll bank line is available. August is included in the single €231,000 Jan-Aug payroll payment; no reliable monthly allocation can be made.",
+      "evidence": [
+        "E02",
+        "E07"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "D022",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Rent payments.",
+      "answer": "Match the €48,000 Jan-Aug bank payment to rent and recognize €48,000 operating expense.",
+      "evidence": [
+        "E02",
+        "E13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D023",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Meta and influencer payments.",
+      "answer": "Match the €55,000 payment described as Meta, TikTok and influencers to marketing expense.",
+      "evidence": [
+        "E02",
+        "E13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D024",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Software payments.",
+      "answer": "Match €16,000 of bank payments to software subscriptions and recognize software expense.",
+      "evidence": [
+        "E02",
+        "E13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D025",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Utilities payments.",
+      "answer": "Match €12,000 of bank payments to utilities and recognize utilities expense.",
+      "evidence": [
+        "E02",
+        "E13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D026",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Repair transfer.",
+      "answer": "Match the €10,000 emergency-machine-work transfer to invoice R-771. Expense it as repair and maintenance because it restored normal output without increasing capacity or useful life.",
+      "evidence": [
+        "E02",
+        "E06"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D027",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Packaging machine payment.",
+      "answer": "Match the €60,000 Pack-O-Matic payment to equipment invoice A-910 and capitalize it as PPE available for use on 10 May.",
+      "evidence": [
+        "E02",
+        "E06",
+        "E08"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D028",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Photo booth payment.",
+      "answer": "Match the €20,000 Regret Photo Booth payment to equipment invoice P-404 and capitalize it as PPE available for use on 10 May.",
+      "evidence": [
+        "E02",
+        "E06",
+        "E08"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D029",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Loan receipt.",
+      "answer": "Match the €50,000 receipt on 1 March to the Baltic Bank facility. It is borrowing requiring repayment, not revenue.",
+      "evidence": [
+        "E02",
+        "E09"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D030",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Loan repayments.",
+      "answer": "Match the €19,000 payment to loan principal. Reduce cash and the loan liability; do not recognize an expense.",
+      "evidence": [
+        "E02",
+        "E09"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D031",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Interest payments.",
+      "answer": "Match €10,000 paid interest to the loan schedule. Recognize €12,000 period interest expense and €2,000 unpaid interest.",
+      "evidence": [
+        "E02",
+        "E09",
+        "E11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D032",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Villa deposit.",
+      "answer": "Match the €70,000 Sunset Villa payment to a villa in the founder's personal name. Treat it as an owner distribution, not marketing or payroll.",
+      "evidence": [
+        "E02",
+        "E09",
+        "E10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D033",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Owner card spending.",
+      "answer": "Match €40,000 of chairman's platinum-card spending to other owner spending and treat it as an owner distribution.",
+      "evidence": [
+        "E02",
+        "E09",
+        "E13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D034",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Insurance movement.",
+      "answer": "No insurance movement is identifiable in the bank export or supplied schedules. Record no insurance cash movement or expense and retain the evidence gap.",
+      "evidence": [
+        "E02",
+        "E13"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "D035",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Water-damaged stock.",
+      "answer": "Identify €22,000 of basement stock as physically present but wet and unsaleable. Exclude it from saleable closing inventory and write its carrying amount to zero.",
+      "evidence": [
+        "E05",
+        "E11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D036",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Customer insolvency.",
+      "answer": "Identify R-17 as an €18,000 receivable from a customer in liquidation with no expected recovery. Fully impair/write off the balance.",
+      "evidence": [
+        "E04",
+        "E10",
+        "E11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D037",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Former employee claim.",
+      "answer": "Identify the former-employee claim as probable at 31 August with a €25,000 best estimate. Recognize a €25,000 provision and expense.",
+      "evidence": [
+        "E09",
+        "E11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D038",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Purchase total.",
+      "answer": "Use €459,000 as period purchases, supported by supplier invoices, goods-received stamps and confirmed closing balances.",
+      "evidence": [
+        "E06",
+        "E05"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D039",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Cash collections total.",
+      "answer": "Current-period customer receipts total €774,000: €180,000 + €142,000 + €70,000 + €95,000 + €250,000 + €37,000. Exclude €35,000 opening-AR collection and €90,000 September deposits from this subtotal.",
+      "evidence": [
+        "E02",
+        "E03"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D040",
+      "category": "evidence_matching",
+      "reviewTier": "operational",
+      "question": "Resolve the source and treatment of Closing bank balance.",
+      "answer": "Use the externally confirmed €60,000 closing bank balance. It also reconciles from €80,000 opening cash and a €20,000 net outflow.",
+      "evidence": [
+        "E02",
+        "E11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D041",
+      "category": "classification",
+      "reviewTier": "material_judgment",
+      "question": "Classify September customer deposits.",
+      "answer": "Cash receipt does not establish revenue before performance. Both delivery dates fall after the reporting date.",
+      "evidence": [
+        "E02",
+        "E04"
+      ],
+      "confidence": "high",
+      "aiProposal": "Record €90,000 of September deposits as customer advances, not August revenue.",
+      "independentChallenge": "Independently concluded that neither September event was delivered by 31 August, so the deposits are liabilities.",
+      "studentReasoning": "Cash receipt does not establish revenue before performance. Both delivery dates fall after the reporting date.",
+      "statementEffect": {
+        "profit": 0,
+        "cash": 90000,
+        "assets": 90000,
+        "liabilities": 90000,
+        "equity": 0
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D042",
+      "category": "classification",
+      "reviewTier": "material_judgment",
+      "question": "Classify New bank borrowing.",
+      "answer": "The agreement requires repayment and the bank entry corroborates borrowing. It cannot be revenue.",
+      "evidence": [
+        "E02",
+        "E09"
+      ],
+      "confidence": "high",
+      "aiProposal": "Record the €50,000 bank advance as borrowing rather than income.",
+      "independentChallenge": "Independently identified a repayable bank facility and reached the same loan classification.",
+      "studentReasoning": "The agreement requires repayment and the bank entry corroborates borrowing. It cannot be revenue.",
+      "statementEffect": {
+        "profit": 0,
+        "cash": 50000,
+        "assets": 50000,
+        "liabilities": 50000,
+        "equity": 0
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D043",
+      "category": "classification",
+      "reviewTier": "material_judgment",
+      "question": "Classify Packaging machine.",
+      "answer": "The equipment invoice and installation evidence support capitalization. Depreciation begins when available for use.",
+      "evidence": [
+        "E02",
+        "E06",
+        "E08"
+      ],
+      "confidence": "high",
+      "aiProposal": "Capitalize the €60,000 Pack-O-Matic 9000 as PPE.",
+      "independentChallenge": "Independently concluded that the installed machine is a controlled long-term asset available for use on 10 May.",
+      "studentReasoning": "The equipment invoice and installation evidence support capitalization. Depreciation begins when available for use.",
+      "statementEffect": {
+        "profit": 0,
+        "cash": -60000,
+        "assets": 0,
+        "liabilities": 0,
+        "equity": 0
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D044",
+      "category": "classification",
+      "reviewTier": "material_judgment",
+      "question": "Classify Photo booth.",
+      "answer": "Its use extends beyond the current period. The management label does not change the asset's substance.",
+      "evidence": [
+        "E02",
+        "E06",
+        "E08"
+      ],
+      "confidence": "high",
+      "aiProposal": "Capitalize the €20,000 Regret Photo Booth as PPE, not marketing expense.",
+      "independentChallenge": "Independently treated the booth as equipment available for use on 10 May and not as advertising.",
+      "studentReasoning": "Its use extends beyond the current period. The management label does not change the asset's substance.",
+      "statementEffect": {
+        "profit": 0,
+        "cash": -20000,
+        "assets": 0,
+        "liabilities": 0,
+        "equity": 0
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D045",
+      "category": "classification",
+      "reviewTier": "material_judgment",
+      "question": "Classify Machine belt and calibration.",
+      "answer": "The supplier description shows maintenance rather than an enhancement, so no PPE addition is justified.",
+      "evidence": [
+        "E02",
+        "E06"
+      ],
+      "confidence": "high",
+      "aiProposal": "Expense the €10,000 belt, cleaning and calibration work as repair and maintenance.",
+      "independentChallenge": "Independently concluded the work restored normal output without increasing capacity or useful life.",
+      "studentReasoning": "The supplier description shows maintenance rather than an enhancement, so no PPE addition is justified.",
+      "statementEffect": {
+        "profit": -10000,
+        "cash": -10000,
+        "assets": -10000,
+        "liabilities": 0,
+        "equity": -10000
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D046",
+      "category": "classification",
+      "reviewTier": "material_judgment",
+      "question": "Classify Owner villa deposit.",
+      "answer": "The payment has no business purpose supported by evidence. It reduces cash and equity, not profit.",
+      "evidence": [
+        "E02",
+        "E09",
+        "E10"
+      ],
+      "confidence": "high",
+      "aiProposal": "Treat the €70,000 villa payment as an owner distribution.",
+      "independentChallenge": "Independently found the villa was in the founder's personal name with no customer meeting and reached the same treatment.",
+      "studentReasoning": "The payment has no business purpose supported by evidence. It reduces cash and equity, not profit.",
+      "statementEffect": {
+        "profit": 0,
+        "cash": -70000,
+        "assets": -70000,
+        "liabilities": 0,
+        "equity": -70000
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D047",
+      "category": "classification",
+      "reviewTier": "material_judgment",
+      "question": "Classify Owner card spending.",
+      "answer": "The bank and owner-card evidence identify personal owner spending. Together with the villa it produces €110,000 distributions.",
+      "evidence": [
+        "E02",
+        "E09",
+        "E13"
+      ],
+      "confidence": "high",
+      "aiProposal": "Treat €40,000 of other owner-card spending as an owner distribution.",
+      "independentChallenge": "Independently concluded the owner-card spending is not supported as a business or payroll cost.",
+      "studentReasoning": "The bank and owner-card evidence identify personal owner spending. Together with the villa it produces €110,000 distributions.",
+      "statementEffect": {
+        "profit": 0,
+        "cash": -40000,
+        "assets": -40000,
+        "liabilities": 0,
+        "equity": -40000
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D048",
+      "category": "classification",
+      "reviewTier": "material_judgment",
+      "question": "Classify Physical product materials consumed.",
+      "answer": "Materials used for delivered products belong in COGS. The final amount is €80,000 + €459,000 - €121,000.",
+      "evidence": [
+        "E05",
+        "E06",
+        "E13"
+      ],
+      "confidence": "medium",
+      "aiProposal": "Classify €418,000 of physical product materials as inventory COGS.",
+      "independentChallenge": "Independently used opening inventory, purchases and verified saleable closing inventory to derive the same COGS, while retaining the count discrepancy.",
+      "studentReasoning": "Materials used for delivered products belong in COGS. The final amount is €80,000 + €459,000 - €121,000.",
+      "statementEffect": {
+        "profit": -418000,
+        "cash": 0,
+        "assets": -418000,
+        "liabilities": 0,
+        "equity": -418000
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D049",
+      "category": "classification",
+      "reviewTier": "material_judgment",
+      "question": "Classify Event staff payroll.",
+      "answer": "Functional classification follows the work performed, not management's admin label. €75,000 was paid and €5,000 remains in payroll accruals.",
+      "evidence": [
+        "E07",
+        "E13"
+      ],
+      "confidence": "high",
+      "aiProposal": "Classify €80,000 event-delivery payroll as direct labour in COGS.",
+      "independentChallenge": "Independently concluded these employees work directly on paid events and therefore belong in COGS.",
+      "studentReasoning": "Functional classification follows the work performed, not management's admin label. €75,000 was paid and €5,000 remains in payroll accruals.",
+      "statementEffect": {
+        "profit": -80000,
+        "cash": -75000,
+        "assets": -75000,
+        "liabilities": 5000,
+        "equity": -80000
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D050",
+      "category": "classification",
+      "reviewTier": "operational",
+      "question": "Classify Sales team payroll.",
+      "answer": "Classify €72,000 sales and partnerships payroll as selling/operating expense; €68,000 was paid and €4,000 contributes to the closing payroll payable.",
+      "evidence": [
+        "E07",
+        "E13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D051",
+      "category": "classification",
+      "reviewTier": "operational",
+      "question": "Classify Office payroll.",
+      "answer": "Classify €96,000 office and finance payroll as administrative operating expense; €88,000 was paid and €8,000 contributes to the closing payroll payable.",
+      "evidence": [
+        "E07",
+        "E13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D052",
+      "category": "classification",
+      "reviewTier": "operational",
+      "question": "Classify Rent.",
+      "answer": "Classify €48,000 rent as operating expense.",
+      "evidence": [
+        "E02",
+        "E13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D053",
+      "category": "classification",
+      "reviewTier": "operational",
+      "question": "Classify Marketing.",
+      "answer": "Classify €55,000 Meta, TikTok and influencer payments as marketing operating expense.",
+      "evidence": [
+        "E02",
+        "E13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D054",
+      "category": "classification",
+      "reviewTier": "operational",
+      "question": "Classify Software.",
+      "answer": "Classify €16,000 software subscriptions as operating expense.",
+      "evidence": [
+        "E02",
+        "E13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D055",
+      "category": "classification",
+      "reviewTier": "operational",
+      "question": "Classify Utilities.",
+      "answer": "Classify €12,000 utilities as operating expense.",
+      "evidence": [
+        "E02",
+        "E13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D056",
+      "category": "classification",
+      "reviewTier": "material_judgment",
+      "question": "Classify Depreciation.",
+      "answer": "Opening and added PPE are in use during the period. The certified schedule gives €24,000 and closing accumulated depreciation of €69,000.",
+      "evidence": [
+        "E08",
+        "E13"
+      ],
+      "confidence": "high",
+      "aiProposal": "Recognize €24,000 period depreciation.",
+      "independentChallenge": "Independently agreed with the available-for-use dates and the certified depreciation schedule.",
+      "studentReasoning": "Opening and added PPE are in use during the period. The certified schedule gives €24,000 and closing accumulated depreciation of €69,000.",
+      "statementEffect": {
+        "profit": -24000,
+        "cash": 0,
+        "assets": -24000,
+        "liabilities": 0,
+        "equity": -24000
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D057",
+      "category": "classification",
+      "reviewTier": "material_judgment",
+      "question": "Classify Bad receivable.",
+      "answer": "The post-period notice is adjusting evidence about the reporting-date condition. Leaving the balance in receivables would overstate assets and profit.",
+      "evidence": [
+        "E04",
+        "E11"
+      ],
+      "confidence": "high",
+      "aiProposal": "Fully impair/write off the €18,000 R-17 receivable.",
+      "independentChallenge": "Independently concluded the liquidation notice confirms a condition existing at 31 August and no recovery is expected.",
+      "studentReasoning": "The post-period notice is adjusting evidence about the reporting-date condition. Leaving the balance in receivables would overstate assets and profit.",
+      "statementEffect": {
+        "profit": -18000,
+        "cash": 0,
+        "assets": -18000,
+        "liabilities": 0,
+        "equity": -18000
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D058",
+      "category": "classification",
+      "reviewTier": "material_judgment",
+      "question": "Classify Damaged stock.",
+      "answer": "Certify the €22,000 inventory write-down. Do not recognize the separate €2,000 disposal provision at 31 August; retain it as an uncertainty because no accepted quote or present obligation is evidenced.",
+      "evidence": [
+        "E05",
+        "E11",
+        "E13"
+      ],
+      "confidence": "medium",
+      "aiProposal": "Write the €22,000 damaged stock to zero and recognize a separate €2,000 disposal provision.",
+      "independentChallenge": "Independently agreed the stock has no saleable value, but concluded the quote alone does not establish a present obligation for the €2,000 disposal cost.",
+      "studentReasoning": "Certify the €22,000 inventory write-down. Do not recognize the separate €2,000 disposal provision at 31 August; retain it as an uncertainty because no accepted quote or present obligation is evidenced.",
+      "statementEffect": {
+        "profit": -22000,
+        "cash": 0,
+        "assets": -22000,
+        "liabilities": 0,
+        "equity": -22000
+      },
+      "changedFromAI": true,
+      "agentDisagreement": true
+    },
+    {
+      "id": "D059",
+      "category": "classification",
+      "reviewTier": "material_judgment",
+      "question": "Classify Probable legal claim.",
+      "answer": "Counsel's 31 August assessment is strong external evidence. €25,000 is the best estimate within the €20,000-€30,000 range.",
+      "evidence": [
+        "E09",
+        "E11"
+      ],
+      "confidence": "high",
+      "aiProposal": "Recognize a €25,000 legal provision and expense.",
+      "independentChallenge": "Independently concluded that external counsel's probable assessment and best estimate meet the recognition threshold.",
+      "studentReasoning": "Counsel's 31 August assessment is strong external evidence. €25,000 is the best estimate within the €20,000-€30,000 range.",
+      "statementEffect": {
+        "profit": -25000,
+        "cash": 0,
+        "assets": 0,
+        "liabilities": 25000,
+        "equity": -25000
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D060",
+      "category": "classification",
+      "reviewTier": "operational",
+      "question": "Classify Insurance consumed.",
+      "answer": "Recognize no insurance consumed because no insurance transaction or coverage schedule is present in the supplied evidence.",
+      "evidence": [
+        "E02",
+        "E13"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "D061",
+      "category": "classification",
+      "reviewTier": "operational",
+      "question": "Classify Unpaid interest.",
+      "answer": "Classify €2,000 unpaid interest as an accrued liability: €12,000 expense less €10,000 paid.",
+      "evidence": [
+        "E09",
+        "E11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D062",
+      "category": "classification",
+      "reviewTier": "operational",
+      "question": "Classify Unpaid payroll.",
+      "answer": "Classify €32,000 unpaid payroll as a current liability: €15,000 opening payable + €248,000 expense - €231,000 paid.",
+      "evidence": [
+        "E07",
+        "E13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D063",
+      "category": "classification",
+      "reviewTier": "operational",
+      "question": "Classify Unpaid suppliers.",
+      "answer": "Classify €126,000 unpaid suppliers as trade payables. The balance is externally confirmed; the €45,000 opening payable needed for the roll-forward is reconstructed.",
+      "evidence": [
+        "E06",
+        "E13"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "D064",
+      "category": "classification",
+      "reviewTier": "material_judgment",
+      "question": "Classify Delivered NorthStar contract.",
+      "answer": "Delivery was accepted on 12 February. Customer-name variants are resolved by invoice, date and amount matching.",
+      "evidence": [
+        "E02",
+        "E03",
+        "E04"
+      ],
+      "confidence": "high",
+      "aiProposal": "Recognize €180,000 NorthStar revenue.",
+      "independentChallenge": "Independently matched the accepted contract, CRM record and bank receipt and reached the same conclusion.",
+      "studentReasoning": "Delivery was accepted on 12 February. Customer-name variants are resolved by invoice, date and amount matching.",
+      "statementEffect": {
+        "profit": 180000,
+        "cash": 180000,
+        "assets": 180000,
+        "liabilities": 0,
+        "equity": 180000
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D065",
+      "category": "classification",
+      "reviewTier": "material_judgment",
+      "question": "Classify Delivered Freedom contract.",
+      "answer": "Revenue follows delivery and acceptance. €142,000 cash plus €58,000 receivable equals the €200,000 contract.",
+      "evidence": [
+        "E02",
+        "E03",
+        "E04"
+      ],
+      "confidence": "high",
+      "aiProposal": "Recognize €200,000 Freedom Festivals revenue and a €58,000 receivable.",
+      "independentChallenge": "Independently concluded that acceptance on 18 March supports full revenue despite partial cash collection.",
+      "studentReasoning": "Revenue follows delivery and acceptance. €142,000 cash plus €58,000 receivable equals the €200,000 contract.",
+      "statementEffect": {
+        "profit": 200000,
+        "cash": 142000,
+        "assets": 200000,
+        "liabilities": 0,
+        "equity": 200000
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D066",
+      "category": "classification",
+      "reviewTier": "material_judgment",
+      "question": "Classify Completed Phoenix event.",
+      "answer": "The service was complete and finally accepted. €70,000 cash plus €30,000 receivable equals the contract value.",
+      "evidence": [
+        "E02",
+        "E03",
+        "E04"
+      ],
+      "confidence": "high",
+      "aiProposal": "Recognize €100,000 Phoenix event revenue and a €30,000 receivable.",
+      "independentChallenge": "Independently treated the 29 April final customer acceptance as completion evidence and reached the same result.",
+      "studentReasoning": "The service was complete and finally accepted. €70,000 cash plus €30,000 receivable equals the contract value.",
+      "statementEffect": {
+        "profit": 100000,
+        "cash": 70000,
+        "assets": 100000,
+        "liabilities": 0,
+        "equity": 100000
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D067",
+      "category": "classification",
+      "reviewTier": "material_judgment",
+      "question": "Classify Delivered Liberty order.",
+      "answer": "The order was delivered on 20 June and accepted. €95,000 cash plus €25,000 receivable equals revenue.",
+      "evidence": [
+        "E02",
+        "E03",
+        "E04"
+      ],
+      "confidence": "high",
+      "aiProposal": "Recognize €120,000 Liberty revenue and a €25,000 receivable.",
+      "independentChallenge": "Independently relied on delivery and the customer's explicit acceptance in full.",
+      "studentReasoning": "The order was delivered on 20 June and accepted. €95,000 cash plus €25,000 receivable equals revenue.",
+      "statementEffect": {
+        "profit": 120000,
+        "cash": 95000,
+        "assets": 120000,
+        "liabilities": 0,
+        "equity": 120000
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D068",
+      "category": "classification",
+      "reviewTier": "material_judgment",
+      "question": "Classify Undelivered September events.",
+      "answer": "Both events were scheduled after 31 August. The receipts increase cash and liabilities, not August profit.",
+      "evidence": [
+        "E02",
+        "E04"
+      ],
+      "confidence": "high",
+      "aiProposal": "Recognize no August revenue for the undelivered September events; record €90,000 customer advances.",
+      "independentChallenge": "Independently concluded that the reporting-date performance condition had not been satisfied.",
+      "studentReasoning": "Both events were scheduled after 31 August. The receipts increase cash and liabilities, not August profit.",
+      "statementEffect": {
+        "profit": 0,
+        "cash": 90000,
+        "assets": 90000,
+        "liabilities": 90000,
+        "equity": 0
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D069",
+      "category": "classification",
+      "reviewTier": "operational",
+      "question": "Classify Loan principal payment.",
+      "answer": "Classify the €19,000 loan principal payment as a financing cash outflow and reduction of debt, with no profit effect.",
+      "evidence": [
+        "E02",
+        "E09"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D070",
+      "category": "classification",
+      "reviewTier": "operational",
+      "question": "Classify Equipment purchase.",
+      "answer": "Classify the €80,000 equipment purchases as investing cash outflows and PPE additions: €60,000 Pack-O-Matic plus €20,000 photo booth.",
+      "evidence": [
+        "E02",
+        "E06"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D071",
+      "category": "estimation",
+      "reviewTier": "material_judgment",
+      "question": "Estimate Closing bad-debt allowance/write-off and document the basis.",
+      "answer": "The specific outstanding amount is documented and no distribution is expected, so partial recovery is not supported.",
+      "evidence": [
+        "E04",
+        "E11"
+      ],
+      "confidence": "high",
+      "aiProposal": "Estimate the R-17 bad-debt write-off at €18,000.",
+      "independentChallenge": "Independently used the liquidator notice and no-recovery evidence to estimate a full €18,000 loss.",
+      "studentReasoning": "The specific outstanding amount is documented and no distribution is expected, so partial recovery is not supported.",
+      "statementEffect": {
+        "profit": -18000,
+        "cash": 0,
+        "assets": -18000,
+        "liabilities": 0,
+        "equity": -18000
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D072",
+      "category": "estimation",
+      "reviewTier": "material_judgment",
+      "question": "Estimate Damaged inventory write-off and document the basis.",
+      "answer": "The goods' carrying amount is fully impaired because they are unsaleable. The write-off is €22,000; the separate €2,000 quote remains unrecognized and uncertain.",
+      "evidence": [
+        "E05",
+        "E11",
+        "E13"
+      ],
+      "confidence": "medium",
+      "aiProposal": "Estimate the damaged-inventory write-off at €22,000; also recognize a €2,000 disposal provision.",
+      "independentChallenge": "Independently agreed the €22,000 carrying value must be written off, but separately rejected recognition of the disposal quote without a present obligation.",
+      "studentReasoning": "The goods' carrying amount is fully impaired because they are unsaleable. The write-off is €22,000; the separate €2,000 quote remains unrecognized and uncertain.",
+      "statementEffect": {
+        "profit": -22000,
+        "cash": 0,
+        "assets": -22000,
+        "liabilities": 0,
+        "equity": -22000
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D073",
+      "category": "estimation",
+      "reviewTier": "material_judgment",
+      "question": "Estimate Legal provision and document the basis.",
+      "answer": "Probability and amount come from external counsel. No stronger evidence supports another point in the range.",
+      "evidence": [
+        "E09",
+        "E11"
+      ],
+      "confidence": "high",
+      "aiProposal": "Estimate the legal provision at €25,000.",
+      "independentChallenge": "Independently selected counsel's €25,000 best estimate within the documented €20,000-€30,000 range.",
+      "studentReasoning": "Probability and amount come from external counsel. No stronger evidence supports another point in the range.",
+      "statementEffect": {
+        "profit": -25000,
+        "cash": 0,
+        "assets": 0,
+        "liabilities": 25000,
+        "equity": -25000
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D074",
+      "category": "estimation",
+      "reviewTier": "material_judgment",
+      "question": "Estimate Period depreciation and document the basis.",
+      "answer": "The certified workbook provides the period estimate and the asset evidence establishes when depreciation begins.",
+      "evidence": [
+        "E06",
+        "E08",
+        "E13"
+      ],
+      "confidence": "high",
+      "aiProposal": "Estimate period depreciation at €24,000.",
+      "independentChallenge": "Independently agreed with the certified schedule using the equipment's 10 May available-for-use date.",
+      "studentReasoning": "The certified workbook provides the period estimate and the asset evidence establishes when depreciation begins.",
+      "statementEffect": {
+        "profit": -24000,
+        "cash": 0,
+        "assets": -24000,
+        "liabilities": 0,
+        "equity": -24000
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D075",
+      "category": "estimation",
+      "reviewTier": "material_judgment",
+      "question": "Estimate Closing inventory and document the basis.",
+      "answer": "Use the physical saleable amount of €121,000, not the €143,000 system total. Recognizing closing inventory carries €121,000 into assets, profit and equity through the COGS calculation. The €134,000 roll-forward differs from the physical/system count by €9,000, which remains unresolved.",
+      "evidence": [
+        "E05",
+        "E06",
+        "E13"
+      ],
+      "confidence": "medium",
+      "aiProposal": "Estimate closing inventory at €121,000 and preserve the €9,000 discrepancy.",
+      "independentChallenge": "Independently concluded that verified saleable stock is €79,000 + €42,000 after excluding €22,000 damaged stock; the count-to-roll-forward difference cannot be explained.",
+      "studentReasoning": "Use the physical saleable amount of €121,000, not the €143,000 system total. Recognizing closing inventory carries €121,000 into assets, profit and equity through the COGS calculation. The €134,000 roll-forward differs from the physical/system count by €9,000, which remains unresolved.",
+      "statementEffect": {
+        "profit": 121000,
+        "cash": 0,
+        "assets": 121000,
+        "liabilities": 0,
+        "equity": 121000
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D076",
+      "category": "estimation",
+      "reviewTier": "operational",
+      "question": "Estimate Closing receivables and document the basis.",
+      "answer": "Estimate net closing receivables at €168,000: €186,000 gross open balances less the €18,000 R-17 impairment.",
+      "evidence": [
+        "E03",
+        "E04",
+        "E11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D077",
+      "category": "estimation",
+      "reviewTier": "operational",
+      "question": "Estimate Repair versus improvement amount and document the basis.",
+      "answer": "Estimate repair expense at €10,000 and improvement/capitalization at €0 for the belt, cleaning and calibration work.",
+      "evidence": [
+        "E06"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D078",
+      "category": "estimation",
+      "reviewTier": "operational",
+      "question": "Estimate Insurance expense and document the basis.",
+      "answer": "Estimate insurance expense at €0 because no insurance movement or consumption evidence is supplied.",
+      "evidence": [
+        "E02",
+        "E13"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "D079",
+      "category": "estimation",
+      "reviewTier": "operational",
+      "question": "Estimate Interest payable and document the basis.",
+      "answer": "Estimate interest payable at €2,000: €12,000 period interest expense less €10,000 paid.",
+      "evidence": [
+        "E09",
+        "E11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D080",
+      "category": "estimation",
+      "reviewTier": "operational",
+      "question": "Estimate Accrued payroll and document the basis.",
+      "answer": "Estimate accrued payroll at €32,000: €15,000 opening + €248,000 expense - €231,000 paid.",
+      "evidence": [
+        "E07",
+        "E13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D081",
+      "category": "estimation",
+      "reviewTier": "operational",
+      "question": "Estimate Customer deposit liability and document the basis.",
+      "answer": "Estimate the customer-deposit liability at €90,000: €60,000 New Beginnings + €30,000 Fresh Freedom, both undelivered at 31 August.",
+      "evidence": [
+        "E02",
+        "E04"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D082",
+      "category": "estimation",
+      "reviewTier": "operational",
+      "question": "Estimate PPE closing cost and document the basis.",
+      "answer": "Estimate closing PPE cost at €260,000: €180,000 opening cost + €80,000 qualifying additions.",
+      "evidence": [
+        "E06",
+        "E08",
+        "E13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D083",
+      "category": "estimation",
+      "reviewTier": "operational",
+      "question": "Estimate Accumulated depreciation and document the basis.",
+      "answer": "Estimate accumulated depreciation at €69,000: €45,000 opening accumulated depreciation + €24,000 period depreciation.",
+      "evidence": [
+        "E08",
+        "E13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D084",
+      "category": "estimation",
+      "reviewTier": "operational",
+      "question": "Estimate Supplier payable and document the basis.",
+      "answer": "Estimate supplier payables at €126,000 from independently confirmed supplier balances. The supporting roll-forward is €45,000 reconstructed opening + €459,000 purchases - €378,000 paid.",
+      "evidence": [
+        "E02",
+        "E06",
+        "E13"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "D085",
+      "category": "estimation",
+      "reviewTier": "operational",
+      "question": "Estimate Closing loan and document the basis.",
+      "answer": "Estimate the closing loan at €131,000: €100,000 opening + €50,000 borrowing - €19,000 principal repaid.",
+      "evidence": [
+        "E02",
+        "E09",
+        "E11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D086",
+      "category": "estimation",
+      "reviewTier": "operational",
+      "question": "Estimate Physical COGS and document the basis.",
+      "answer": "Estimate physical materials COGS at €418,000: €80,000 opening inventory + €459,000 purchases - €121,000 final saleable inventory.",
+      "evidence": [
+        "E05",
+        "E06",
+        "E13"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "D087",
+      "category": "estimation",
+      "reviewTier": "operational",
+      "question": "Estimate Service direct payroll and document the basis.",
+      "answer": "Estimate service direct payroll at €80,000, classified as event-delivery direct labour in COGS.",
+      "evidence": [
+        "E07",
+        "E13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D088",
+      "category": "estimation",
+      "reviewTier": "operational",
+      "question": "Estimate Owner distributions and document the basis.",
+      "answer": "Estimate owner distributions at €110,000: €70,000 villa + €40,000 other owner-card spending. Do not treat the amount as payroll.",
+      "evidence": [
+        "E02",
+        "E09",
+        "E13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D089",
+      "category": "estimation",
+      "reviewTier": "operational",
+      "question": "Estimate Net profit and document the basis.",
+      "answer": "Estimate net profit at €74,000: €960,000 revenue - €498,000 COGS - €376,000 operating expenses - €12,000 interest.",
+      "evidence": [
+        "E13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D090",
+      "category": "estimation",
+      "reviewTier": "operational",
+      "question": "Estimate Closing cash and document the basis.",
+      "answer": "Estimate closing cash at €60,000: €80,000 opening cash - €20,000 net cash movement, corroborated by bank confirmation.",
+      "evidence": [
+        "E02",
+        "E11",
+        "E13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D091",
+      "category": "board_decision",
+      "reviewTier": "material_judgment",
+      "question": "Approve corrected accounts before valuation",
+      "answer": "The certified statements reconcile to external evidence and disclose uncertainties. Management's €312,000 profit does not.",
+      "evidence": [
+        "E11",
+        "E12",
+        "E13"
+      ],
+      "confidence": "high",
+      "aiProposal": "Approve the corrected accounts before any valuation decision.",
+      "independentChallenge": "Independently concluded the unreconciled management P&L is unsuitable for valuation and the corrected statements should govern.",
+      "studentReasoning": "The certified statements reconcile to external evidence and disclose uncertainties. Management's €312,000 profit does not.",
+      "statementEffect": {
+        "profit": 0,
+        "cash": 0,
+        "assets": 0,
+        "liabilities": 0,
+        "equity": 0
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    },
+    {
+      "id": "D092",
+      "category": "board_decision",
+      "reviewTier": "operational",
+      "question": "Freeze owner-card access",
+      "answer": "Recommend immediately freezing owner-card access pending revised authorization controls and review of the €110,000 personal spending identified.",
+      "evidence": [
+        "E02",
+        "E09",
+        "E10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D093",
+      "category": "board_decision",
+      "reviewTier": "operational",
+      "question": "Move September deposits to contract liabilities",
+      "answer": "Move the €90,000 September deposits to contract liabilities until the September events are delivered; do not include them in August revenue.",
+      "evidence": [
+        "E02",
+        "E04"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D094",
+      "category": "board_decision",
+      "reviewTier": "operational",
+      "question": "Begin weekly 13-week cash forecast",
+      "answer": "Begin a weekly 13-week cash forecast. Closing cash is €60,000 after a €20,000 period outflow, with significant payables and debt obligations.",
+      "evidence": [
+        "E02",
+        "E11",
+        "E13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D095",
+      "category": "board_decision",
+      "reviewTier": "operational",
+      "question": "Stop credit sales to insolvent/high-risk customers",
+      "answer": "Stop extending credit to insolvent customers and require documented credit approval for high-risk customers. R-17 requires an €18,000 full impairment.",
+      "evidence": [
+        "E04",
+        "E11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D096",
+      "category": "board_decision",
+      "reviewTier": "operational",
+      "question": "Dispose of damaged stock",
+      "answer": "Arrange disposal of the wet, unsaleable basement stock. Keep the €2,000 quote under review; do not recognize a provision until a present obligation is established.",
+      "evidence": [
+        "E05",
+        "E11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D097",
+      "category": "board_decision",
+      "reviewTier": "operational",
+      "question": "Investigate management override and duplicate sources",
+      "answer": "Investigate management override and conflicting records, including attempted revenue acceleration, loan misclassification, owner-spending labels and suppression of adverse adjustments.",
+      "evidence": [
+        "E10",
+        "E12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "D098",
+      "category": "board_decision",
+      "reviewTier": "operational",
+      "question": "Renegotiate supplier terms",
+      "answer": "Renegotiate supplier terms and improve payable monitoring. Closing trade payables are €126,000 and opening payables of €45,000 had to be reconstructed.",
+      "evidence": [
+        "E02",
+        "E06",
+        "E13"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "D099",
+      "category": "board_decision",
+      "reviewTier": "operational",
+      "question": "Continue core Finally Single and event operations",
+      "answer": "Continue the core Finally Single and event operations subject to the corrected accounts, cash controls and product-level monitoring. The case evidence supports genuine delivered sales, but not management's reported profit.",
+      "evidence": [
+        "E03",
+        "E04",
+        "E13"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "D100",
+      "category": "board_decision",
+      "reviewTier": "material_judgment",
+      "question": "Use claimed management profit for earn-out",
+      "answer": "The certified reconstruction is evidence-backed and reconciled. The board should not reward an unsupported number; legal interpretation of earn-out wording remains outside this accounting conclusion.",
+      "evidence": [
+        "E10",
+        "E12",
+        "E13"
+      ],
+      "confidence": "high",
+      "aiProposal": "Do not use management's claimed €312,000 profit for earn-out purposes; use the corrected €74,000 result subject to the transaction terms.",
+      "independentChallenge": "Independently rejected the unsupported management result because it includes September deposits and borrowing as income and omits required adjustments.",
+      "studentReasoning": "The certified reconstruction is evidence-backed and reconciled. The board should not reward an unsupported number; legal interpretation of earn-out wording remains outside this accounting conclusion.",
+      "statementEffect": {
+        "profit": 0,
+        "cash": 0,
+        "assets": 0,
+        "liabilities": 0,
+        "equity": 0
+      },
+      "changedFromAI": false,
+      "agentDisagreement": false
+    }
+  ],
+  "schedules": {
+    "revenueReceivables": {
+      "rows": [
+        {
+          "customer": "NorthStar",
+          "revenue": 180000,
+          "cash": 180000,
+          "grossAR": 0,
+          "impairment": 0,
+          "netAR": 0
+        },
+        {
+          "customer": "Freedom Festivals",
+          "revenue": 200000,
+          "cash": 142000,
+          "grossAR": 58000,
+          "impairment": 0,
+          "netAR": 58000
+        },
+        {
+          "customer": "Phoenix HR",
+          "revenue": 100000,
+          "cash": 70000,
+          "grossAR": 30000,
+          "impairment": 0,
+          "netAR": 30000
+        },
+        {
+          "customer": "Liberty Hotels",
+          "revenue": 120000,
+          "cash": 95000,
+          "grossAR": 25000,
+          "impairment": 0,
+          "netAR": 25000
+        },
+        {
+          "customer": "Finally Single web",
+          "revenue": 270000,
+          "cash": 250000,
+          "grossAR": 20000,
+          "impairment": 0,
+          "netAR": 20000
+        },
+        {
+          "customer": "Never Call Back web",
+          "revenue": 90000,
+          "cash": 37000,
+          "grossAR": 53000,
+          "impairment": -18000,
+          "netAR": 35000
+        },
+        {
+          "customer": "New Beginnings September",
+          "revenue": 0,
+          "cash": 60000,
+          "grossAR": 0,
+          "impairment": 0,
+          "netAR": 0,
+          "advance": 60000
+        },
+        {
+          "customer": "Fresh Freedom September",
+          "revenue": 0,
+          "cash": 30000,
+          "grossAR": 0,
+          "impairment": 0,
+          "netAR": 0,
+          "advance": 30000
+        }
+      ],
+      "revenueTotal": 960000,
+      "grossAR": 186000,
+      "impairment": -18000,
+      "netAR": 168000,
+      "customerAdvances": 90000
+    },
+    "inventoryCOGS": {
+      "openingInventory": 80000,
+      "purchases": 459000,
+      "recordedConsumption": 405000,
+      "rollForwardExpected": 134000,
+      "systemPhysical": 143000,
+      "unexplainedDifference": 9000,
+      "damagedStock": 22000,
+      "saleableInventory": 121000,
+      "materialsCOGS": 418000
+    },
+    "purchasesPayables": {
+      "openingPayablesReconstructed": 45000,
+      "purchases": 459000,
+      "supplierPayments": 378000,
+      "closingPayables": 126000,
+      "rows": [
+        {
+          "supplier": "BoxWorks",
+          "purchases": 130000,
+          "unpaid": 25000
+        },
+        {
+          "supplier": "Glass & Drama",
+          "purchases": 120000,
+          "unpaid": 28000
+        },
+        {
+          "supplier": "Print Again",
+          "purchases": 95000,
+          "unpaid": 14000
+        },
+        {
+          "supplier": "Event Things Europe",
+          "purchases": 114000,
+          "unpaid": 59000
+        }
+      ]
+    },
+    "payroll": {
+      "openingPayable": 15000,
+      "expense": 248000,
+      "cashPaid": 231000,
+      "closingPayable": 32000,
+      "rows": [
+        {
+          "department": "Event delivery",
+          "expense": 80000,
+          "cash": 75000,
+          "classification": "COGS"
+        },
+        {
+          "department": "Sales & partnerships",
+          "expense": 72000,
+          "cash": 68000,
+          "classification": "Operating expense"
+        },
+        {
+          "department": "Office & finance",
+          "expense": 96000,
+          "cash": 88000,
+          "classification": "Operating expense"
+        }
+      ],
+      "founderClaimedBonusExcluded": 110000
+    },
+    "ppe": {
+      "openingCost": 180000,
+      "openingAccumulatedDepreciation": 45000,
+      "additions": 80000,
+      "closingCost": 260000,
+      "periodDepreciation": 24000,
+      "closingAccumulatedDepreciation": 69000,
+      "closingNBV": 191000
+    },
+    "debtInterest": {
+      "openingLoan": 100000,
+      "newBorrowing": 50000,
+      "principalRepayment": 19000,
+      "closingLoan": 131000,
+      "interestExpense": 12000,
+      "interestPaid": 10000,
+      "interestPayable": 2000
+    },
+    "equity": {
+      "openingEquity": 170000,
+      "profit": 74000,
+      "ownerDistributions": 110000,
+      "closingEquity": 134000
+    }
+  },
+  "statements": {
+    "profitAndLoss": {
+      "revenue": 960000,
+      "materialsInventoryCOGS": -418000,
+      "eventDeliveryDirectPayroll": -80000,
+      "totalCOGS": -498000,
+      "grossProfit": 462000,
+      "salesPartnershipsPayroll": -72000,
+      "officeFinancePayroll": -96000,
+      "rent": -48000,
+      "marketing": -55000,
+      "software": -16000,
+      "utilities": -12000,
+      "repairMaintenance": -10000,
+      "badDebt": -18000,
+      "legalClaim": -25000,
+      "damagedStockDisposalExpense": 0,
+      "depreciation": -24000,
+      "totalOperatingExpenses": -376000,
+      "operatingProfit": 86000,
+      "interestExpense": -12000,
+      "finalProfit": 74000
+    },
+    "cashFlow": {
+      "openingCash": 80000,
+      "oldCustomerARCollected": 35000,
+      "currentPeriodCustomerReceipts": 774000,
+      "septemberCustomerDeposits": 90000,
+      "newBorrowing": 50000,
+      "supplierPayments": -378000,
+      "payrollPaid": -231000,
+      "rent": -48000,
+      "marketing": -55000,
+      "software": -16000,
+      "utilities": -12000,
+      "repair": -10000,
+      "interestPaid": -10000,
+      "equipmentPurchases": -80000,
+      "loanPrincipalRepayment": -19000,
+      "ownerDistributions": -110000,
+      "netCashMovement": -20000,
+      "closingCash": 60000
+    },
+    "balanceSheet": {
+      "assets": {
+        "cash": 60000,
+        "tradeReceivables": 168000,
+        "inventory": 121000,
+        "ppeNetBookValue": 191000,
+        "totalAssets": 540000
+      },
+      "liabilities": {
+        "tradePayables": 126000,
+        "payrollPayable": 32000,
+        "customerAdvances": 90000,
+        "bankLoan": 131000,
+        "interestPayable": 2000,
+        "legalProvision": 25000,
+        "damagedStockDisposalProvision": 0,
+        "totalLiabilities": 406000
+      },
+      "equity": {
+        "openingEquity": 170000,
+        "profit": 74000,
+        "ownerDistributions": -110000,
+        "closingEquity": 134000
+      },
+      "totalLiabilitiesEquity": 540000,
+      "balanceCheck": 0
+    }
+  },
+  "reconciliations": [
+    {
+      "id": "R01",
+      "name": "Balance sheet",
+      "calculation": "540,000 - 406,000 - 134,000",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "R02",
+      "name": "Cash",
+      "calculation": "80,000 - 20,000",
+      "actual": 60000,
+      "expected": 60000,
+      "status": "PASS"
+    },
+    {
+      "id": "R03",
+      "name": "Equity",
+      "calculation": "170,000 + 74,000 - 110,000",
+      "actual": 134000,
+      "expected": 134000,
+      "status": "PASS"
+    },
+    {
+      "id": "R04",
+      "name": "Loan",
+      "calculation": "100,000 + 50,000 - 19,000",
+      "actual": 131000,
+      "expected": 131000,
+      "status": "PASS"
+    },
+    {
+      "id": "R05",
+      "name": "Interest",
+      "calculation": "12,000 - 10,000",
+      "actual": 2000,
+      "expected": 2000,
+      "status": "PASS"
+    },
+    {
+      "id": "R06",
+      "name": "Payroll",
+      "calculation": "15,000 + 248,000 - 231,000",
+      "actual": 32000,
+      "expected": 32000,
+      "status": "PASS"
+    },
+    {
+      "id": "R07",
+      "name": "Trade payables",
+      "calculation": "45,000 + 459,000 - 378,000",
+      "actual": 126000,
+      "expected": 126000,
+      "status": "PASS"
+    },
+    {
+      "id": "R08",
+      "name": "Receivables",
+      "calculation": "186,000 - 18,000",
+      "actual": 168000,
+      "expected": 168000,
+      "status": "PASS"
+    },
+    {
+      "id": "R09",
+      "name": "Customer advances",
+      "calculation": "60,000 + 30,000",
+      "actual": 90000,
+      "expected": 90000,
+      "status": "PASS"
+    },
+    {
+      "id": "R10",
+      "name": "PPE NBV",
+      "calculation": "260,000 - 69,000",
+      "actual": 191000,
+      "expected": 191000,
+      "status": "PASS"
+    }
+  ],
+  "uncertainties": [
+    {
+      "id": "U01",
+      "title": "Inventory discrepancy",
+      "amount": 9000,
+      "detail": "Roll-forward expected inventory is €134,000; warehouse/system count is €143,000. Final saleable inventory is €121,000 after excluding €22,000 damaged stock. The source of the €9,000 difference is unresolved."
+    },
+    {
+      "id": "U02",
+      "title": "Damaged-stock disposal",
+      "amount": 2000,
+      "detail": "An independent €2,000 removal quote exists, but the evidence does not establish an accepted quote or present obligation at 31 August. No provision is recognized."
+    },
+    {
+      "id": "U03",
+      "title": "Opening trade payables",
+      "amount": 45000,
+      "detail": "Opening trade payables are reconstructed as €45,000 from closing payables, purchases and bank payments; they are not directly documented."
+    }
+  ],
+  "boardRecommendation": {
+    "headline": "Approve the corrected accounts before valuation and do not use the unsupported €312,000 management profit for earn-out purposes.",
+    "decisionIds": [
+      "D091",
+      "D092",
+      "D093",
+      "D094",
+      "D095",
+      "D096",
+      "D097",
+      "D098",
+      "D099",
+      "D100"
+    ],
+    "certifiedProfit": 74000,
+    "managementClaimedProfit": 312000
+  }
+}

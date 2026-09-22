@@ -6,3 +6,4 @@
 @media(max-width:1000px){.start-here{grid-template-columns:1fr}.start-here nav{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.start-here nav{grid-template-columns:1fr}.decision-card summary{align-items:flex-start}.decision-card summary .pill-row{display:none}.decision-card summary:after{margin-top:4px}.decision-actions{grid-column:1/-1}}
 .student-warning{display:none!important}
+.effect-note{margin:8px 0 10px;color:var(--muted);font-size:13px}.decision-card footer a{margin:0 10px 6px 0;font-weight:700}

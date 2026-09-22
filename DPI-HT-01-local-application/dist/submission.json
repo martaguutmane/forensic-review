@@ -7,6 +7,7 @@
   },
   "reportingDate": "2026-08-31",
   "currency": "EUR",
+  "statementEffectPolicy": "Each material judgment shows the signed, standalone effect of its certified treatment versus omitting the focal item. Related official questions may revisit the same accounting event, so decision effects are not incremental and must not be summed across D001-D100.",
   "evidence": [
     {
       "id": "E01",
@@ -1229,8 +1230,8 @@
         "liabilities": 0,
         "equity": -22000
       },
-      "changedFromAI": false,
-      "agentDisagreement": false
+      "changedFromAI": true,
+      "agentDisagreement": true
     },
     {
       "id": "D073",
@@ -1849,6 +1850,8 @@
       "equipmentPurchases": -80000,
       "loanPrincipalRepayment": -19000,
       "ownerDistributions": -110000,
+      "totalInflows": 949000,
+      "totalOutflows": 969000,
       "netCashMovement": -20000,
       "closingCash": 60000
     },
@@ -1892,7 +1895,7 @@
     {
       "id": "R02",
       "name": "Cash",
-      "calculation": "80,000 - 20,000",
+      "calculation": "80,000 + 949,000 - 969,000",
       "actual": 60000,
       "expected": 60000,
       "status": "PASS"
@@ -1959,6 +1962,22 @@
       "calculation": "260,000 - 69,000",
       "actual": 191000,
       "expected": 191000,
+      "status": "PASS"
+    },
+    {
+      "id": "R11",
+      "name": "PPE cost",
+      "calculation": "180,000 + 80,000",
+      "actual": 260000,
+      "expected": 260000,
+      "status": "PASS"
+    },
+    {
+      "id": "R12",
+      "name": "Accumulated depreciation",
+      "calculation": "45,000 + 24,000",
+      "actual": 69000,
+      "expected": 69000,
       "status": "PASS"
     }
   ],

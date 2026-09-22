@@ -126,7 +126,7 @@ material_specs = {
 "D067":("Recognize €120,000 Liberty revenue and a €25,000 receivable.","Independently relied on delivery and the customer's explicit acceptance in full.","The order was delivered on 20 June and accepted. €95,000 cash plus €25,000 receivable equals revenue.",{"profit":120000,"cash":95000,"assets":120000,"liabilities":0,"equity":120000},["E02","E03","E04"],"high",False,False),
 "D068":("Recognize no August revenue for the undelivered September events; record €90,000 customer advances.","Independently concluded that the reporting-date performance condition had not been satisfied.","Both events were scheduled after 31 August. The receipts increase cash and liabilities, not August profit.",{"profit":0,"cash":90000,"assets":90000,"liabilities":90000,"equity":0},["E02","E04"],"high",False,False),
 "D071":("Estimate the R-17 bad-debt write-off at €18,000.","Independently used the liquidator notice and no-recovery evidence to estimate a full €18,000 loss.","The specific outstanding amount is documented and no distribution is expected, so partial recovery is not supported.",{"profit":-18000,"cash":0,"assets":-18000,"liabilities":0,"equity":-18000},["E04","E11"],"high",False,False),
-"D072":("Estimate the damaged-inventory write-off at €22,000; also recognize a €2,000 disposal provision.","Independently agreed the €22,000 carrying value must be written off, but separately rejected recognition of the disposal quote without a present obligation.","The goods' carrying amount is fully impaired because they are unsaleable. The write-off is €22,000; the separate €2,000 quote remains unrecognized and uncertain.",{"profit":-22000,"cash":0,"assets":-22000,"liabilities":0,"equity":-22000},["E05","E11","E13"],"medium",False,False),
+"D072":("Estimate the damaged-inventory write-off at €22,000; also recognize a €2,000 disposal provision.","Independently agreed the €22,000 carrying value must be written off, but separately rejected recognition of the disposal quote without a present obligation.","The goods' carrying amount is fully impaired because they are unsaleable. The write-off is €22,000; the separate €2,000 quote remains unrecognized and uncertain.",{"profit":-22000,"cash":0,"assets":-22000,"liabilities":0,"equity":-22000},["E05","E11","E13"],"medium",True,True),
 "D073":("Estimate the legal provision at €25,000.","Independently selected counsel's €25,000 best estimate within the documented €20,000-€30,000 range.","Probability and amount come from external counsel. No stronger evidence supports another point in the range.",{"profit":-25000,"cash":0,"assets":0,"liabilities":25000,"equity":-25000},["E09","E11"],"high",False,False),
 "D074":("Estimate period depreciation at €24,000.","Independently agreed with the certified schedule using the equipment's 10 May available-for-use date.","The certified workbook provides the period estimate and the asset evidence establishes when depreciation begins.",{"profit":-24000,"cash":0,"assets":-24000,"liabilities":0,"equity":-24000},["E06","E08","E13"],"high",False,False),
 "D075":("Estimate closing inventory at €121,000 and preserve the €9,000 discrepancy.","Independently concluded that verified saleable stock is €79,000 + €42,000 after excluding €22,000 damaged stock; the count-to-roll-forward difference cannot be explained.","Use the physical saleable amount of €121,000, not the €143,000 system total. Recognizing closing inventory carries €121,000 into assets, profit and equity through the COGS calculation. The €134,000 roll-forward differs from the physical/system count by €9,000, which remains unresolved.",{"profit":121000,"cash":0,"assets":121000,"liabilities":0,"equity":121000},["E05","E06","E13"],"medium",False,False),
@@ -179,17 +179,53 @@ statements = {
 "balanceSheet":{"assets":{"cash":60000,"tradeReceivables":168000,"inventory":121000,"ppeNetBookValue":191000,"totalAssets":540000},"liabilities":{"tradePayables":126000,"payrollPayable":32000,"customerAdvances":90000,"bankLoan":131000,"interestPayable":2000,"legalProvision":25000,"damagedStockDisposalProvision":0,"totalLiabilities":406000},"equity":{"openingEquity":170000,"profit":74000,"ownerDistributions":-110000,"closingEquity":134000},"totalLiabilitiesEquity":540000,"balanceCheck":0}
 }
 
+cash_flow = statements["cashFlow"]
+cash_flow.pop("netCashMovement")
+cash_flow.pop("closingCash")
+cash_flow["totalInflows"] = sum(cash_flow[key] for key in (
+    "oldCustomerARCollected",
+    "currentPeriodCustomerReceipts",
+    "septemberCustomerDeposits",
+    "newBorrowing",
+))
+cash_flow["totalOutflows"] = -sum(cash_flow[key] for key in (
+    "supplierPayments",
+    "payrollPaid",
+    "rent",
+    "marketing",
+    "software",
+    "utilities",
+    "repair",
+    "interestPaid",
+    "equipmentPurchases",
+    "loanPrincipalRepayment",
+    "ownerDistributions",
+))
+cash_flow["netCashMovement"] = cash_flow["totalInflows"] - cash_flow["totalOutflows"]
+cash_flow["closingCash"] = cash_flow["openingCash"] + cash_flow["netCashMovement"]
+
+pnl = statements["profitAndLoss"]
+balance_sheet = statements["balanceSheet"]
+inventory = schedules["inventoryCOGS"]
+payables = schedules["purchasesPayables"]
+payroll = schedules["payroll"]
+ppe = schedules["ppe"]
+debt = schedules["debtInterest"]
+equity = schedules["equity"]
+
 reconciliations = [
-{"id":"R01","name":"Balance sheet","calculation":"540,000 - 406,000 - 134,000","actual":statements['balanceSheet']['assets']['totalAssets']-statements['balanceSheet']['liabilities']['totalLiabilities']-statements['balanceSheet']['equity']['closingEquity'],"expected":0},
-{"id":"R02","name":"Cash","calculation":"80,000 - 20,000","actual":80000-20000,"expected":60000},
-{"id":"R03","name":"Equity","calculation":"170,000 + 74,000 - 110,000","actual":170000+74000-110000,"expected":134000},
-{"id":"R04","name":"Loan","calculation":"100,000 + 50,000 - 19,000","actual":100000+50000-19000,"expected":131000},
-{"id":"R05","name":"Interest","calculation":"12,000 - 10,000","actual":12000-10000,"expected":2000},
-{"id":"R06","name":"Payroll","calculation":"15,000 + 248,000 - 231,000","actual":15000+248000-231000,"expected":32000},
-{"id":"R07","name":"Trade payables","calculation":"45,000 + 459,000 - 378,000","actual":45000+459000-378000,"expected":126000},
-{"id":"R08","name":"Receivables","calculation":"186,000 - 18,000","actual":186000-18000,"expected":168000},
-{"id":"R09","name":"Customer advances","calculation":"60,000 + 30,000","actual":60000+30000,"expected":90000},
-{"id":"R10","name":"PPE NBV","calculation":"260,000 - 69,000","actual":260000-69000,"expected":191000},
+{"id":"R01","name":"Balance sheet","calculation":"540,000 - 406,000 - 134,000","actual":balance_sheet["assets"]["totalAssets"]-balance_sheet["liabilities"]["totalLiabilities"]-balance_sheet["equity"]["closingEquity"],"expected":0},
+{"id":"R02","name":"Cash","calculation":"80,000 + 949,000 - 969,000","actual":cash_flow["openingCash"]+cash_flow["totalInflows"]-cash_flow["totalOutflows"],"expected":cash_flow["closingCash"]},
+{"id":"R03","name":"Equity","calculation":"170,000 + 74,000 - 110,000","actual":equity["openingEquity"]+equity["profit"]-equity["ownerDistributions"],"expected":equity["closingEquity"]},
+{"id":"R04","name":"Loan","calculation":"100,000 + 50,000 - 19,000","actual":debt["openingLoan"]+debt["newBorrowing"]-debt["principalRepayment"],"expected":debt["closingLoan"]},
+{"id":"R05","name":"Interest","calculation":"12,000 - 10,000","actual":debt["interestExpense"]-debt["interestPaid"],"expected":debt["interestPayable"]},
+{"id":"R06","name":"Payroll","calculation":"15,000 + 248,000 - 231,000","actual":payroll["openingPayable"]+payroll["expense"]-payroll["cashPaid"],"expected":payroll["closingPayable"]},
+{"id":"R07","name":"Trade payables","calculation":"45,000 + 459,000 - 378,000","actual":payables["openingPayablesReconstructed"]+payables["purchases"]-payables["supplierPayments"],"expected":payables["closingPayables"]},
+{"id":"R08","name":"Receivables","calculation":"186,000 - 18,000","actual":schedules["revenueReceivables"]["grossAR"]+schedules["revenueReceivables"]["impairment"],"expected":schedules["revenueReceivables"]["netAR"]},
+{"id":"R09","name":"Customer advances","calculation":"60,000 + 30,000","actual":sum(row.get("advance",0) for row in schedules["revenueReceivables"]["rows"]),"expected":schedules["revenueReceivables"]["customerAdvances"]},
+{"id":"R10","name":"PPE NBV","calculation":"260,000 - 69,000","actual":ppe["closingCost"]-ppe["closingAccumulatedDepreciation"],"expected":ppe["closingNBV"]},
+{"id":"R11","name":"PPE cost","calculation":"180,000 + 80,000","actual":ppe["openingCost"]+ppe["additions"],"expected":ppe["closingCost"]},
+{"id":"R12","name":"Accumulated depreciation","calculation":"45,000 + 24,000","actual":ppe["openingAccumulatedDepreciation"]+ppe["periodDepreciation"],"expected":ppe["closingAccumulatedDepreciation"]},
 ]
 for r in reconciliations:
     r['status'] = 'PASS' if r['actual'] == r['expected'] else 'FAIL'
@@ -202,7 +238,13 @@ uncertainties = [
 
 board_recommendation = {"headline":"Approve the corrected accounts before valuation and do not use the unsupported €312,000 management profit for earn-out purposes.","decisionIds":[f"D{i:03d}" for i in range(91,101)],"certifiedProfit":74000,"managementClaimedProfit":312000}
 
-case = {"schemaVersion":"1.0","caseId":"DPI-HT-01","student":{"id":"withheld-public","name":"Withheld from public version"},"reportingDate":"2026-08-31","currency":"EUR","evidence":evidence,"decisions":decisions,"schedules":schedules,"statements":statements,"reconciliations":reconciliations,"uncertainties":uncertainties,"boardRecommendation":board_recommendation}
+statement_effect_policy = (
+    "Each material judgment shows the signed, standalone effect of its certified treatment versus omitting "
+    "the focal item. Related official questions may revisit the same accounting event, so decision effects "
+    "are not incremental and must not be summed across D001-D100."
+)
+
+case = {"schemaVersion":"1.0","caseId":"DPI-HT-01","student":{"id":"withheld-public","name":"Withheld from public version"},"reportingDate":"2026-08-31","currency":"EUR","statementEffectPolicy":statement_effect_policy,"evidence":evidence,"decisions":decisions,"schedules":schedules,"statements":statements,"reconciliations":reconciliations,"uncertainties":uncertainties,"boardRecommendation":board_recommendation}
 
 out = ROOT/'src'/'case-data.json'
 out.write_text(json.dumps(case,indent=2,ensure_ascii=False)+"\n")

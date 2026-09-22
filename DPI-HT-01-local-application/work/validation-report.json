@@ -3,6 +3,7 @@
   "customIntegrityValid": true,
   "decisionCount": 100,
   "materialCount": 25,
+  "operationalCount": 75,
   "lowConfidence": [
     "D014",
     "D015",
@@ -17,12 +18,15 @@
     "D078"
   ],
   "agentDisagreements": [
-    "D058"
+    "D058",
+    "D072"
   ],
   "studentOverrides": [
-    "D058"
+    "D058",
+    "D072"
   ],
   "allReconciliationsPass": true,
+  "reconciliationCount": 12,
   "studentPlaceholders": false,
   "studentRedacted": true,
   "errors": []
